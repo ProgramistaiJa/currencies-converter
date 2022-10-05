@@ -7,13 +7,9 @@ interface ButtonProps {
    */
   primary?: boolean;
   /**
-   * What background color to use
+   * Is this button isDisabled?
    */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
+  isDisabled?: boolean;
   /**
    * Button contents
    */
@@ -29,17 +25,16 @@ interface ButtonProps {
  */
 export const Button = ({
   primary = false,
-  size = 'medium',
-  backgroundColor,
+  isDisabled = false,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode: string = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const disabled = (mode:string, isDisabled:boolean) => ( `${mode}${isDisabled?'--disable':''}` );
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      className={['storybook-button', mode, disabled(mode, isDisabled)].join(' ')}
       {...props}
     >
       {label}

@@ -1,0 +1,44 @@
+.storybook-button {
+  font-family: 'Open Sans', 'Semibold','Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  border: 0;
+  border-radius: 100px;
+  cursor: pointer;
+  display: inline-block;
+  width: 167px;
+  height: 60px;
+  line-height: 1;
+}
+.storybook-button--primary {
+  color: white;
+  background: #335566 0% 0% no-repeat padding-box;
+  box-shadow: 3px 3px 7px #C2CBD9;
+  opacity: 1;
+}
+
+.storybook-button--primary:hover {
+  background: #214456 0% 0% no-repeat padding-box;
+  box-shadow: 5px 5px 12px #98ADCD;
+}
+.storybook-button--primary--disable {
+  background: #A3B1C6 0% 0% no-repeat padding-box;
+  pointer-events: none;  
+}
+
+button.storybook-button--primary--disable:hover {
+  background: #A3B1C6 0% 0% no-repeat padding-box;
+  cursor: not-allowed;
+  /* TODO:Hover on disable button don't work  */
+}
+
+.storybook-button--secondary {
+  color: #333;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 3px 3px 7px #C2CBD9;
+}
+
+.storybook-button--secondary:hover {
+  box-shadow: 5px 5px 12px #98ADCD;
+}
