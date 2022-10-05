@@ -18,6 +18,10 @@ interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+  /**
+   * Type of button
+   */
+  type?: "button" | "submit" | "reset";
 }
 
 /**
