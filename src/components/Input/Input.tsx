@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm, SubmitHandler, FieldError, UseFormRegister } from "react-hook-form";
+import { FieldError, UseFormRegister } from "react-hook-form";
 import styled from 'styled-components'
 import { Inputs } from '../views/Form/Form';
 
@@ -48,9 +48,7 @@ export const Input = ({
     );
   };
 
-const InputContainer = styled.div`
-    
-`
+const InputContainer = styled.div``
 const StyledInput = styled.div`
     display: flex;
     flex-direction: column;
