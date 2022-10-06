@@ -39,7 +39,7 @@ export const Input = ({
             <StyledInput>
                 <label htmlFor={inputName}>{label}</label>
                {/* register your input into the hook by invoking the "register" function */}
-                <input placeholder={placeholder} {...register(inputName, { required: required })} />
+                <input placeholder={placeholder} {...register(inputName, { required: required })} {...props} />
                 {/* errors will return when field validation fails  */}
                 {error && <span>This field is required</span>}
             </StyledInput>
