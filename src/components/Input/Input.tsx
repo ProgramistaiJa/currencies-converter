@@ -12,7 +12,7 @@ interface InputProps{
      * Name and id for input
      */
     inputName: "result" | "amount",
-    // TODO: Fixed typ for inputName
+    // TODO: Fix type for inputName
 
     /**
      * Options array
